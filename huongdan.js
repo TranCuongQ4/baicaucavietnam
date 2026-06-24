@@ -24,13 +24,13 @@ function createHelpModal() {
                     <li style="margin-bottom:8px;">🔴 <b>Điểm:</b> Chỉ tính cho lá <span style="color:#ff4444;">♥ (Cơ)</span> và <span style="color:#ff4444;">♦ (Rô)</span>.</li>
                     <li style="margin-bottom:8px;">⭐ <b>Ưu tiên:</b> Ăn Cơ/Rô trước, sau đó mới đến Chuồn/Bích.</li>
                     <li style="margin-bottom:8px;">🔄 <b>Lượt chơi:</b> Theo chiều kim đồng hồ: Tôi → Tây → Bắc → Đông.</li>
-                    <li style="margin-bottom:8px;">🏆 <b>Thứ hạng:</b> Nhất (+10$), Nhì (+5$), Ba (-5$), Cuối (-10$).</li>
-                    <li style="margin-bottom:8px;">💰 <b>Hết tiền:</b> Được tặng 500$ để tiếp tục.</li>
+                    <li style="margin-bottom:8px;">🏆 <b>Thứ hạng:</b> Nhất (+10💰), Nhì (+5💰), Ba (-5💰), Cuối (-10💰).</li>
+                    <li style="margin-bottom:8px;">💰 <b>Hết tiền:</b> Được tặng 500💰 để tiếp tục.</li>
                     <li style="margin-bottom:8px;">🎮 <b>Cách Chơi:</b> Chọn lá bài rồi nhấn "Đánh Bài".</li>
                 </ul>
                 <p style="text-align:center; margin:12px 0 4px; color:#aaa; font-style:italic;">Chúc bạn may mắn! 🍀</p>
             </div>
-            <button id="btn-help-close" class="help-close-btn">✅ Đã Hiểu</button>
+            <button id="btn-help-close" class="help-close-btn">✅ Đã Hiểu✅</button>
         </div>
     `;
     
