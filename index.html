@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Bài Câu Cá VN</title>
+    <link rel="stylesheet" href="style.css">
+	
+	<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
+	
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header id="header">
+            <h1 id="title">Bài Câu Cá VN</h1>
+        </header>
+
+        <!-- Khu vực chơi chính -->
+        <main id="game-area">
+            <!-- Thông tin người chơi -->
+            <div id="players">
+                <!-- Tôi (Nam) -->
+                <div class="player" id="player-south">
+                    <span class="player-name">Tôi (Nam)</span>
+                    <span class="player-score">0 Điểm</span>
+                    <span class="player-money">1000💰</span>
+                    <div class="player-cards"></div>
+                </div>
+                <!-- Đông -->
+                <div class="player" id="player-east">
+                    <span class="player-name">Đông</span>
+                    <span class="player-score">0 Điểm</span>
+                    <span class="player-money">1000💰</span>
+                    <div class="player-cards"></div>
+                </div>
+                <!-- Bắc -->
+                <div class="player" id="player-north">
+                    <span class="player-name">Bắc</span>
+                    <span class="player-score">0 Điểm</span>
+                    <span class="player-money">1000💰</span>
+                    <div class="player-cards"></div>
+                </div>
+                <!-- Tây -->
+                <div class="player" id="player-west">
+                    <span class="player-name">Tây</span>
+                    <span class="player-score">0 Điểm</span>
+                    <span class="player-money">1000💰</span>
+                    <div class="player-cards"></div>
+                </div>
+            </div>
+
+            <!-- Bảng thông báo - Đặt ngay trên khung bàn -->
+            <div id="notification" style="display:none;"></div>
+
+            <!-- Bàn bài -->
+            <div id="table-cards">
+                <div class="row" id="row1"></div>
+                <div class="row" id="row2"></div>
+                <div class="row" id="row3"></div>
+            </div>
+
+            <!-- Nút chức năng hàng 1 -->
+            <div id="controls-row1">
+                <button id="btn-new-game">Ván Mới</button>
+                <button id="btn-mode">Chế Độ Chơi</button>
+                <button id="btn-play">Đánh Bài</button>
+            </div>
+
+            <!-- Nút chức năng hàng 2 -->
+            <div id="controls-row2">
+                <button id="btn-music">🎵 Nhạc Nền</button>
+                <button id="btn-help">Hướng Dẫn</button>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p>Thiết Kế Trần Cường - Zalo: 0907860662</p>
+        </footer>
+    </div>
+
+    <!-- Modal chế độ chơi -->
+    <div id="mode-modal" class="modal">
+        <div class="modal-content mode-content">
+            <h2 style="color:#ffd700; text-align:center; margin-bottom:16px;">⚙️ CHẾ ĐỘ CHƠI</h2>
+            <div id="mode-options">
+                <div class="mode-player">
+                    <span class="mode-player-name">🧑 Tôi (Nam)</span>
+                    <span class="mode-player-status">Người chơi</span>
+                </div>
+                <div class="mode-player">
+                    <span class="mode-player-name">🧑 Tây</span>
+                    <div class="mode-toggle-group">
+                        <button class="mode-btn mode-btn-human active" data-player="west" data-mode="human">Người</button>
+                        <button class="mode-btn mode-btn-bot" data-player="west" data-mode="bot">Bot</button>
+                    </div>
+                </div>
+                <div class="mode-player">
+                    <span class="mode-player-name">🧑 Bắc</span>
+                    <div class="mode-toggle-group">
+                        <button class="mode-btn mode-btn-human active" data-player="north" data-mode="human">Người</button>
+                        <button class="mode-btn mode-btn-bot" data-player="north" data-mode="bot">Bot</button>
+                    </div>
+                </div>
+                <div class="mode-player">
+                    <span class="mode-player-name">🧑 Đông</span>
+                    <div class="mode-toggle-group">
+                        <button class="mode-btn mode-btn-human active" data-player="east" data-mode="human">Người</button>
+                        <button class="mode-btn mode-btn-bot" data-player="east" data-mode="bot">Bot</button>
+                    </div>
+                </div>
+            </div>
+            <div id="mode-actions">
+                <button id="btn-mode-start" class="mode-start-btn">▶ Bắt Đầu</button>
+                <button id="btn-mode-close" class="mode-close-btn">✖ Đóng</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal kết thúc trận -->
+    <div id="end-modal" class="modal">
+        <div class="modal-content">
+            <div id="end-result"></div>
+            <button id="btn-close-modal">OK</button>
+        </div>
+    </div>
+
+    <!-- Audio -->
+    <audio id="bg-music" loop>
+        <source src="cauca.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="huongdan.js"></script>
+    <script src="baibot.js"></script>
+    <script src="mode.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
